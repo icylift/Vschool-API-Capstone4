@@ -1,38 +1,436 @@
-.App {
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'poppins', sans-serif;
+  
+}
+
+.main-body {
+  background-image: url("5333978.jpg");
+  height: 100%;
+  width: 100%;
+  padding-top: 200px;
+  padding-bottom: 200px;
+  
+}
+
+
+
+
+/*  ---------------------------   NAV BAR    -----------------------------*/
+
+
+.name {
+  font-family: 'papyrus';
+  font-size: 60px;
+  
+}
+
+.nav {
+  border-style: double;
+  display: flex;
+  flex-direction: row;
+  background-color: rgb(168, 242, 168);
+  height: 90px;
+  
+}
+
+/*--------------------------- search------------------------------------------*/
+
+.search-results-display {
+  border-style: solid;
+  background-color: #fff;
+  height: auto;
+  width: 300px;
+  
+}
+
+
+
+
+.search-bar {
+  height: 300px;
+  margin-left: 650px;
+  margin-top: 200px;
+  font-size: medium;
+  font-weight: 500;
+  font-style: italic;
+}
+
+.search-input {
+  width: 400px;
+  border-style: solid;
+  border-width: 3px;
+  border-radius: 10%;
+  border-color: #333;
+}
+
+.search-button {
+  font-family: 'poppins';
+  color: #fff !important;
+  text-transform: uppercase;
+  font-weight: 700;
+  text-decoration: none;
+  background: #d7c62c;
+  padding: 20px;
+  border-radius: 50px;
+  display: inline-block;
+  border: none;
+  transition: all 0.4s ease 0s;
+}
+
+.search-button:hover {
+  text-shadow: 0px 0px 6px rgba(255, 255, 255, 1);
+  -webkit-box-shadow: 0px 5px 40px -10px rgba(0,0,0,0.57);
+  -moz-box-shadow: 0px 5px 40px -10px rgba(0,0,0,0.57);
+  transition: all 0.4s ease 0s;
+}
+
+
+.search-wrapper {
+  position: relative;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  margin: 10px;
+  
+}
+
+.search-btn {
+  display: block;
+  width: 200px;
+  height: 40px;
+  line-height: 40px;
+  font-size: 18px;
+  font-family: sans-serif;
+  text-decoration: none;
+  color: #333;
+  border: 2px solid #333;
+  letter-spacing: 2px;
   text-align: center;
+  position: relative;
+  transition: all .35s;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.search-btn span{
+  position: relative;
+  z-index: 2;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.search-btn:after{
+  position: absolute;
+  content: "";
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 100%;
+  background: #2fb9f9;
+  transition: all .35s;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.search-btn:hover{
+  color: #fff;
+}
+
+.search-btn:hover:after{
+  width: 100%;
+}
+
+
+/*--------------------TRACKER CSS -----------------------*/
+
+.tracker-wrapper{
+  position: relative;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  margin: 10px; 
+}
+
+
+
+.tracker-btn {
+  display: block;
+  width: 200px;
+  height: 40px;
+  line-height: 40px;
+  font-size: 18px;
+  font-family: sans-serif;
+  text-decoration: none;
+  color: #333;
+  border: 2px solid #333;
+  letter-spacing: 2px;
+  text-align: center;
+  position: relative;
+  transition: all .35s;
+}
+
+.tracker-btn span{
+  position: relative;
+  z-index: 2;
+}
+
+.tracker-btn:after{
+  position: absolute;
+  content: "";
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 100%;
+  background: #2fb9f9;
+  transition: all .35s;
+}
+
+.tracker-btn:hover{
+  color: #fff;
+}
+
+.tracker-btn:hover:after{
+  width: 100%;
+}
+
+.tracker-add-btn  {
+  font-family: 'poppins';
+  color: #fff !important;
+  text-transform: uppercase;
+  font-weight: 700;
+  text-decoration: none;
+  background: #d7c62c;
+  padding: 20px;
+  border-radius: 50px;
+  display: inline-block;
+  border: none;
+  transition: all 0.4s ease 0s;
+}
+
+.tracker-add-btn:hover {
+  text-shadow: 0px 0px 6px rgba(255, 255, 255, 1);
+  -webkit-box-shadow: 0px 5px 40px -10px rgba(0,0,0,0.57);
+  -moz-box-shadow: 0px 5px 40px -10px rgba(0,0,0,0.57);
+  transition: all 0.4s ease 0s;
+}
+
+
+
+
+/* ------------------------------- Search page CSS -------------------------------------- */
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* -----------------------  Tracker table CSS ------------------------------------*/
+
+
+
+.tracker-container {
   display: flex;
   flex-direction: column;
+  gap: 10px;
+  padding: 1rem;
+}
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+th,
+td {
+  border: 1px solid #ffff;
+  text-align: left;
+  padding: 8px;
+  font-size: 30px;
+}
+
+th {
+  background-color: rgb(117, 201, 250);
+
+}
+
+td {
+  background-color: rgb(205, 235, 253);
+}
+
+form {
+  display: flex;
+
+  gap: 5px;
+}
+
+form td:last-child {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+form * {
+  font-size: 25px;
+}
+
+/* ----------------------------------------------------- */
+
+/* ------------------------  progress bar css         ------------------------*/
+
+.progress-bar-body {
+  display: flex;
+  height: 100vh;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  
+  
+
+
 }
 
-.App-link {
-  color: #61dafb;
+.progress-bar-skill {
+  width: 160px;
+  height: 160px;
+  position: relative;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.outer-circle {
+  height: 160px;
+  width: 160px;
+  border-radius: 50%;
+  padding: 20px;
+  box-shadow: 6px 6px 10px -1px rgba(0,0,0,0.15),
+              -6px -6px 10px -1px rgba(255,255,255,0.7);
+              background-color: #fff
+}
+
+.inner-circle {
+  
+  height: 120px;
+  width: 120px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  box-shadow: inset 4px 4px 6px -1px rgba(0,0,0,0.2),
+              inset -4px -4px 6px -1px rgba(255,255,255,0.7),
+                    -0.5px -0.5px 0px rgba(255,255,255,1),
+                    0.5px 0.5px 0px rgba(255,255,255,1),
+                    0px 12px 10px -10px rgba(0,0,0,0.05);
+}
+
+#number {
+  font-weight: 600;
+  color: #555;
+  
+}
+
+circle {
+  fill: none;
+  stroke: url(#GradientColor);
+  stroke-width: 20px;
+  stroke-dasharray: 472;
+  stroke-dashoffset: 472;
+  animation: anim 2s linear forwards;
+  
+
+}
+
+svg {
+  position: absolute;
+  top: 30;
+  left: 30;
+  
+
+}
+
+@keyframes anim {
+  100% {
+    stroke-dashoffset: 165; 
   }
-  to {
-    transform: rotate(360deg);
+  
+}
+
+
+/*------------------------ Media Queries ------------------------------------*/
+
+
+
+@media all and (max-width: 767px) {
+  .name {
+    font-size: 30px;
+    
   }
+
+  .tracker-btn {
+    right: 150px;
+    display: block;
+    width: 150px;
+    height: 35px;
+    line-height: 20px;
+    font-size: 15px;
+    font-family: sans-serif;
+    text-decoration: none;
+    color: #333;
+    border: 2px solid #333;
+    letter-spacing: 2px;
+    text-align: center;
+    position: relative;
+    transition: all .35s;
+  }
+
+  .search-btn {
+    right: 150px;
+    display: block;
+    width: 150px;
+    height: 35px;
+    line-height: 20px;
+    font-size: 15px;
+    font-family: sans-serif;
+    text-decoration: none;
+    color: #333;
+    border: 2px solid #333;
+    letter-spacing: 2px;
+    text-align: center;
+    position: relative;
+    transition: all .35s;
+  }
+
+  .search-bar {
+    position: relative;
+    height: 150px;
+    right: 500px;
+    font-size: medium;
+    font-weight: 500;
+    font-style: italic;
+  }
+  
+  .search-input {
+    width: 150px;
+    border-style: solid;
+    border-width: 3px;
+    border-radius: 10%;
+    border-color: #333;
+  }
+
+.tracker-form {
+  height: 50px;
+  
+}
+
+input[type="text"] {
+  width: 100px;
+  font-size: 16px;
+  font-weight: 500;
+}
+
+button {
+  font-size: 16px;
+  font-weight: 500;
+}
+
 }

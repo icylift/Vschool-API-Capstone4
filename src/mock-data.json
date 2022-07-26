@@ -1,0 +1,43 @@
+[
+  {
+    "id": 1,
+    "calories": "680",
+    "protein": "30g",
+    "fat": "12g",
+    "sugar": "30g",
+    "carbs": "46g"
+  },
+  {
+    "id": 2,
+    "calories": "790",
+    "protein": "37g",
+    "fat": "25g",
+    "sugar": "60g",
+    "carbs": "55g"
+  },
+  {
+    "id": 3,
+    "calories": "200",
+    "protein": "20g",
+    "fat": "6g",
+    "sugar": "15g",
+    "carbs": "25g"
+  },
+  {
+    "id": 4,
+    "calories": "490",
+    "protein": "40g",
+    "fat": "25g",
+    "sugar": "6g",
+    "carbs": "22g"
+  },
+  {
+    "id": 5,
+    "calories": "1050",
+    "protein": "50g",
+    "fat": "13g",
+    "sugar": "35g",
+    "carbs": "77g"
+  }
+]
+
